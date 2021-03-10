@@ -1,0 +1,25 @@
+eslint 只做代码的语法检测和质量保证(变量未使用等等)
+Prettier 做代码格式检测和格式化
+
+In other words, use Prettier for formatting and linters for catching bugs
+
+将Prettier集成到eslint中，这样在eslint时同时就格式化检测了(https://www.cnblogs.com/ssaylo/p/12806757.html)
+
+
+使用ProvidePlugin引入实践(解决重复导入相同的文件)
+webpack的plugin中增加$_的配置
+防止文件找不到(eslint报错),配置eslint的global变量
+在Vue的template中使用的注意事项
+  通过$data.$_访问
+  data中重命名后绑定
+  methods中绑定(最推荐)
+
+
+高度定制化的webpack-template
+webpack5
+eslint最新版(在它中还集成了prettier)
+babel最新版
+
+总结:
+loader一般就是识别一些webpack无法识别的文件和模块
+plugin插件就是做一些操作,一般是对内容的操作
