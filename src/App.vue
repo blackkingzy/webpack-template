@@ -1,14 +1,9 @@
 <template>
-  {{ message }}
+  <router-view></router-view>
 </template>
 
 <script>
 export default {
   name: 'App',
-  data() {
-    return {
-      message: process.env.CURRENT_ENV,
-    }
-  },
 }
 </script>

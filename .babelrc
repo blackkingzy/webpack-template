@@ -8,6 +8,23 @@
         "corejs": 3 //babel7需要指定核心库版本(该包替换了@babel/polyfill)
       }
     ]
+  ],
+  "plugins": [
+    [
+      "import", //插件名(babel-plugin-import)
+      {
+        "libraryName": "ant-design-vue", //按需导入模块
+        "style": "css"
+      },
+      "antd" // unique name
+    ]
+    // [
+    //   "import",
+    //   {
+    //     "libraryName": " module name"
+    //   },
+    //   "name"
+    // ]
   ]
 }
 

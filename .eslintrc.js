@@ -1,8 +1,10 @@
-const ENV = process.env.npm_lifecycle_event //dev||build
+// const ENV = process.env.npm_lifecycle_event //dev||build
+
 module.exports = {
   globals: {
     //一些不是在代码中直接导入的全局变量需要在这里注册
     // 'process.env': 'true',
+    VUE_APP_BASE_API: 'readonly',
   },
   env: {
     browser: true,
@@ -24,7 +26,8 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'import/no-unresolved': 'off',
-    'no-unused-vars': ENV === 'build' ? 'error' : 'off',
+    camelcase: 'off',
+    'no-unused-vars': process.env.NODE_ENV === 'production' ? 'off' : 'off',
     'no-console': 'off',
     quotes: ['error', 'single'],
   },
